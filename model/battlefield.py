@@ -1,5 +1,6 @@
 from functools import reduce
 from typing import Optional
+from typing import List
 
 from exceptions import OutOfRangeError
 from vessel import Vessel
@@ -39,7 +40,7 @@ class Battlefield:
         vessel.touched()
         return True
 
-    def get_vessels(self) -> list[Vessel]:
+    def get_vessels(self) -> "list[Vessel]":
         return self.vessels
 
     def get_vessel_by_coordinates(self, x, y, z) -> Optional[Vessel]:

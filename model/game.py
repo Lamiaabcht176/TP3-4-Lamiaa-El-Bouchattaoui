@@ -1,5 +1,6 @@
 from exceptions import GameFullError
 from player import Player
+from typing import List
 
 
 class Game:
@@ -10,7 +11,7 @@ class Game:
     def get_id(self) -> int:
         return self.id
 
-    def get_players(self) -> list[Player]:
+    def get_players(self) -> "list[Player]":
         return self.players
 
     def add_player(self, player: Player):
